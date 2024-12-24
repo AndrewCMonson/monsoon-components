@@ -6,8 +6,9 @@ const buttonStyles = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-blue-500 text-white',
-        secondary: 'bg-gray-300 text-gray-800',
+        primary: 'bg-black text-white border border-black hover:bg-transparent hover:text-black',
+        secondary: 'bg-transparent text-black border border-black hover:bg-black hover:text-white',
+        destructive: 'bg-red-500 text-white border border-red-500 hover:bg-red-600 hover:text-white',
       },
       size: {
         small: 'text-sm',
@@ -22,7 +23,8 @@ const buttonStyles = cva(
   }
 )
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & VariantProps<typeof buttonStyles>;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & VariantProps<typeof buttonStyles> & {
+};
 
 export const Button: FC<ButtonProps> = ({ className, variant, size, ...props}) => {
   return (

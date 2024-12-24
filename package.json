@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@types/react": "^19.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

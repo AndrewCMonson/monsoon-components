@@ -4,10 +4,11 @@ import { Meta, StoryObj } from '@storybook/react';
 export default {
   title: 'Components/Button',
   component: Button,
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: ['primary', 'secondary'],
+      options: ['primary', 'secondary', 'destructive'],
       description: 'Sets the button style variant',
     },
     size: {
@@ -16,8 +17,8 @@ export default {
       description: 'Sets the size of the button',
     },
     children: {
-      control: 'text',
-      description: 'Content inside the button',
+      control: { type: 'text' },
+      description: 'Content of the button',
     },
     onClick: { action: 'clicked', description: 'Event handler for button click' },
   },
@@ -36,7 +37,7 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     variant: 'secondary',
-    size: 'large',
+    size: 'medium',
     children: 'Secondary Button',
   }
 };
@@ -48,6 +49,14 @@ export const SmallPrimary: Story = {
     children: 'Small Primary',
   }
 };
+
+export const Destructive: Story = {
+  args: {
+    variant: 'destructive',
+    size: 'medium',
+    children: 'Destructive',
+  }
+}
 
 
 export const Disabled: Story = {
