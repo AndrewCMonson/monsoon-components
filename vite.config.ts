@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite'
+import { defineConfig, ViteUserConfig } from 'vitest/config'
 import path, { resolve } from 'path'
 import react from '@vitejs/plugin-react'
 import { fileURLToPath } from 'url'
@@ -18,7 +18,7 @@ export default defineConfig({
       include: ['lib'],
       tsconfigPath: './tsconfig.app.json',
     }
-  )],
+  )] as ViteUserConfig['plugins'],
   build: {
     copyPublicDir: false,
     lib: {
@@ -34,6 +34,7 @@ export default defineConfig({
     },
   },
   test: {
-    
+    globals: true,
+    environment: 'jsdom',
   }
 })
