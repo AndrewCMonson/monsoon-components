@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 import { Button } from '../dist/index.js';
+import { Card, CardBody, CardFooter, CardHeader } from '../lib/Card/Card.js';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,6 +10,11 @@ function App() {
   return (
     <>
     <Button variant="destructive" >Test</Button>
+    <Card>
+      <CardHeader>Card Header</CardHeader>
+      <CardBody>Card Body</CardBody>
+      <CardFooter>Card Footer</CardFooter>
+    </Card>
       <div>
         <a href="https://vite.dev" target="_blank">
         </a>
