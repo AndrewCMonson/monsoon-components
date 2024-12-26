@@ -31,15 +31,22 @@ describe('Button component', () => {
 		);
 	});
 
-	it('renders with destructive variant', () => {
-		render(<Button variant="destructive">Destructive Button</Button>);
+	it('renders with warning variant', () => {
+		render(<Button variant="warning">Destructive Button</Button>);
 		const button = screen.getByRole('button', { name: /destructive button/i });
 		expect(button).toBeInTheDocument();
 		expect(button).toHaveClass(
 			'bg-red-500 text-white border border-red-500 hover:bg-red-600 hover:text-white'
 		);
 	});
-
+	it('renders with accent variant', () => {
+		render(<Button variant="accent">Accent Button</Button>);
+		const button = screen.getByRole('button', { name: /accent button/i });
+		expect(button).toBeInTheDocument();
+		expect(button).toHaveClass(
+			'bg-accent text-white border border-accent hover:bg-accent-dark hover:text-white'
+		);
+	});
 	it('renders with small size', () => {
 		render(<Button size="small">Small Button</Button>);
 		const button = screen.getByRole('button', { name: /small button/i });

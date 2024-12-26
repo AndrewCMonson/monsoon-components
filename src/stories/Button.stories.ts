@@ -42,14 +42,6 @@ export const Secondary: Story = {
   },
 };
 
-export const Large: Story = {
-  args: {
-    variant: 'primary',
-    size: 'large',
-    children: 'Large',
-  },
-};
-
 export const Small: Story = {
   args: {
     variant: 'primary',
@@ -58,12 +50,45 @@ export const Small: Story = {
   },
 };
 
-export const Destructive: Story = {
+export const Medium: Story = {
   args: {
-    variant: 'destructive',
+    variant: 'primary',
     size: 'medium',
-    children: 'Destructive',
+    children: 'Medium',
   },
 };
+
+export const Large: Story = {
+  args: {
+    variant: 'primary',
+    size: 'large',
+    children: 'Large',
+  },
+};
+
+
+export const Accent: Story = {
+  args: {
+    variant: 'accent',
+    size: 'medium',
+    children: 'Accent',
+  },
+};
+
+export const Warning: Story = {
+  args: {
+    variant: 'warning',
+    size: 'medium',
+    children: 'Warning',
+  },
+};
+
+export const Icon: Story = {
+  args: {
+    variant: 'primary',
+    size: 'icon',
+    children: 'Icon',
+  },
+}
 
 
