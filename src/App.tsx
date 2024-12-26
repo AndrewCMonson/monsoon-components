@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 import { Button } from '../dist/index.js';
-import { Card, CardBody, CardFooter, CardHeader } from '../lib/Card/Card.js';
+import { Card,  CardContent, CardFooter, CardHeader } from '../lib/Card/Card.js';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +12,7 @@ function App() {
     <Button variant="destructive" >Test</Button>
     <Card>
       <CardHeader>Card Header</CardHeader>
-      <CardBody>Card Body</CardBody>
+      <CardContent>Card Body</CardContent>
       <CardFooter>Card Footer</CardFooter>
     </Card>
       <div>
