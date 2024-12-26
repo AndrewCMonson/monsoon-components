@@ -9,7 +9,7 @@ describe('Button component', () => {
 		const button = screen.getByRole('button', { name: /default button/i });
 		expect(button).toBeInTheDocument();
 		expect(button).toHaveClass(
-			'bg-black text-white border border-black hover:bg-transparent hover:text-black text-base'
+			'bg-primary text-secondary border border-primary'
 		);
 	});
 
@@ -18,7 +18,7 @@ describe('Button component', () => {
 		const button = screen.getByRole('button', { name: /primary button/i });
 		expect(button).toBeInTheDocument();
 		expect(button).toHaveClass(
-			'bg-black text-white border border-black hover:bg-transparent hover:text-black'
+			'bg-primary text-secondary border border-primary'
 		);
 	});
 
@@ -27,7 +27,7 @@ describe('Button component', () => {
 		const button = screen.getByRole('button', { name: /secondary button/i });
 		expect(button).toBeInTheDocument();
 		expect(button).toHaveClass(
-			'bg-transparent text-black border border-black hover:bg-black hover:text-white'
+			'bg-transparent text-primary border border-primary'
 		);
 	});
 
@@ -36,16 +36,14 @@ describe('Button component', () => {
 		const button = screen.getByRole('button', { name: /destructive button/i });
 		expect(button).toBeInTheDocument();
 		expect(button).toHaveClass(
-			'bg-red-500 text-white border border-red-500 hover:bg-red-600 hover:text-white'
+			'bg-warning text-secondary border border-warning'
 		);
 	});
 	it('renders with accent variant', () => {
 		render(<Button variant="accent">Accent Button</Button>);
 		const button = screen.getByRole('button', { name: /accent button/i });
 		expect(button).toBeInTheDocument();
-		expect(button).toHaveClass(
-			'bg-accent text-white border border-accent hover:bg-accent-dark hover:text-white'
-		);
+		expect(button).toHaveClass('bg-accent text-secondary border border-accent');
 	});
 	it('renders with small size', () => {
 		render(<Button size="small">Small Button</Button>);
@@ -58,14 +56,14 @@ describe('Button component', () => {
 		render(<Button size="medium">Medium Button</Button>);
 		const button = screen.getByRole('button', { name: /medium button/i });
 		expect(button).toBeInTheDocument();
-		expect(button).toHaveClass('text-base');
+		expect(button).toHaveClass('h-9 rounded-md px-3');
 	});
 
 	it('renders with large size', () => {
 		render(<Button size="large">Large Button</Button>);
 		const button = screen.getByRole('button', { name: /large button/i });
 		expect(button).toBeInTheDocument();
-		expect(button).toHaveClass('text-lg');
+		expect(button).toHaveClass('h-11 rounded-md px-4');
 	});
 
 	it('applies additional class names', () => {
